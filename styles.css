@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.flexcontainer {
+    height: 100%;
+    /*don't need any change in flex-direction, can deal with default values*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body, .flexcontainer, .box {
+    width:100% /*every .box will fit on its own row for small screens*/
+}
+
+/*colorcoding boxes for testing/experimenting purposes*/
+
+.firstbox {
+    background-color: rgb(17, 168, 105);
+}
+
+.secondbox {
+    background-color: crimson;
+}
+
+.thirdbox {
+    background-color: rgb(86, 42, 50);
+}
+
+.fourthbox {
+    background-color: rgb(242, 233, 235);
+}
