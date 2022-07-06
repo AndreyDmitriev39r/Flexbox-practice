@@ -1,4 +1,6 @@
-* {
+* {/*some reset for work from scratch
+    TODO figure out more approaches for reset
+    */
     margin: 0;
     padding: 0;
 }
@@ -35,3 +37,9 @@ body, .flexcontainer, .box {
 .fourthbox {
     background-color: rgb(242, 233, 235);
 }
+
+/*breakpoint values for media querries for now generic,
+
+actual brakpoints MUST depend on content
+*/
+
