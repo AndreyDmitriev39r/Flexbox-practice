@@ -1,5 +1,8 @@
-* {/*some reset for work from scratch
-    TODO figure out more approaches for reset
+* {/*reset some props for work from scratch
+
+    TODO: figure out: more approaches for reset
+    ALSO TODO: figure out: definitely for most CSS files there are most common
+    boilerplate just like for HTML.
     */
     margin: 0;
     padding: 0;
@@ -38,8 +41,38 @@ body, .flexcontainer, .box {
     background-color: rgb(242, 233, 235);
 }
 
-/*breakpoint values for media querries for now generic,
+/*breakpoint values for mediaqueries for now generic,
 
-actual brakpoints MUST depend on content
+actual breakpoints MUST depend on content
 */
 
+/*FIGURE OUT about hiding/changing text dependin g on breakpoints
+with pure CSS
+
+is there elegant approach or we need
+some tactics like for SCREENREADERS-ONLY
+*/
+
+/*first breakpoint >>> need 3-row layout, minimize middle boxes*/
+
+@media screen and (min-width: 500px) {
+    .secondbox, .thirdbox {
+        width: 50%; 
+    }
+}
+
+/*second breakpoint minimize the rest >>> 2-row layout*/
+
+@media screen and (min-width: 900px) {
+    .box {
+        width: 50%; 
+    }
+}
+
+/*for some very wide VW >>> lets make it one row*/
+
+@media screen and (min-width: 1350px) {
+    .box {
+        width: 25%;
+    }
+}
