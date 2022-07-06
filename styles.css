@@ -1,8 +1,8 @@
 * {/*reset some props for work from scratch
 
     TODO: figure out: more approaches for reset
-    ALSO TODO: figure out: definitely for most CSS files there are most common
-    boilerplate just like for HTML.
+    ALSO TODO: figure out: definitely for most CSS files there can be most common
+    boilerplates just like for HTML.
     */
     margin: 0;
     padding: 0;
@@ -10,6 +10,8 @@
 
 body {
     height: 100vh;
+    font-size: 1rem;/*also need minsize for fonts, 
+                    or maintain size with breakpoints more flexible*/
 }
 
 .flexcontainer {
@@ -25,6 +27,16 @@ body, .flexcontainer, .box {
 
 /*colorcoding boxes for testing/experimenting purposes*/
 
+/*min-max height will depend on amount of text
+or image size
+or any content-specifics*/
+
+.box {
+    min-height:300px;
+    max-height:600px;
+    /*min-width:300px; that was crappy idea*/
+}
+
 .firstbox {
     background-color: rgb(17, 168, 105);
 }
@@ -34,7 +46,7 @@ body, .flexcontainer, .box {
 }
 
 .thirdbox {
-    background-color: rgb(86, 42, 50);
+    background-color: rgb(213, 187, 192);
 }
 
 .fourthbox {
@@ -50,7 +62,7 @@ actual breakpoints MUST depend on content
 with pure CSS
 
 is there elegant approach or we need
-some tactics like for SCREENREADERS-ONLY
+many properties like for SCREENREADERS-ONLY
 */
 
 /*first breakpoint >>> need 3-row layout, minimize middle boxes*/
