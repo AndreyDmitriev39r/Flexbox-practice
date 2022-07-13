@@ -1,3 +1,6 @@
+/*JUST need some additional breakpoint to make column drop mostlyFluid: line95*/
+
+
 * {/*reset some props for work from scratch
 
     TODO: figure out: more approaches for reset
@@ -75,7 +78,7 @@ many properties like for SCREENREADERS-ONLY
 
 /*second breakpoint minimize the rest >>> 2-row layout*/
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
     .box {
         width: 50%; 
     }
@@ -83,8 +86,18 @@ many properties like for SCREENREADERS-ONLY
 
 /*for some very wide VW >>> lets make it one row*/
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1000px) {
     .box {
         width: 25%;
+    }
+}
+
+/*THE MAIN difference for this pattern*/
+
+
+@media screen and (min-width: 1200px) {
+    .flexcontainer {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
