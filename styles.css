@@ -39,21 +39,18 @@ body {
                     or maintain size with breakpoints more flexible*/
 }
 
-.flexcontainer{ /*apparently need height 100% for subs, otherwise some boxes will collapse*/
+.flexcontainer { /*apparently need height 100% for subs, otherwise some boxes will collapse*/
     height: 100%;
     /*don't need any change in flex-direction, can deal with default values*/
     display: flex;
     flex-wrap: wrap;
+    align-content: stretch;
 }
 
 body, .flexcontainer, .box {
     width:100%; /*every .box will fit on its own row for small screens*/
-    min-width: 275px; /*to not collapse on very small vw???something isn't working here*/
+    
 }
-
-/*assume we wanna 3 boxes in the vw on small screens*/
-
-
 
 /*colorcoding boxes for testing/experimenting purposes*/
 
@@ -61,11 +58,14 @@ body, .flexcontainer, .box {
 or image size
 or any content-specifics*/
 
+
+/*assume we wanna 3 boxes in the vw on small screens - for now it works*/
 .box {
-    height: 33.33vh;
-    min-height:100px;
-    max-height:250px;
-     
+    min-height: 33.33vh;    
+}
+
+.subcontainer {
+    max-height: 66.66vh;
 }
 
 .firstbox {
@@ -97,8 +97,27 @@ or any content-specifics*/
 actual breakpoints MUST depend on content
 */
 
+/*first breakpoint*/
 
+@media screen and (min-width: 650px) {
+    .firstbox, .secondbox {
+        order: 1;        
+    }
 
+    .sixthbox, .thirdbox {
+        order: -1;
+        
+    }
+
+    .subcontainer, .firstbox, .sixthbox {
+        width: 25%;
+    }
+
+    /*not sure what i am missing about height*/
+    .box {
+        min-height: 50vh;
+    }
+}
 
 
 
