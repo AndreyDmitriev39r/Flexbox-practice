@@ -113,7 +113,7 @@ actual breakpoints MUST depend on content
         width: 25%;
     }
 
-    /*not sure what i am missing about height*/
+    /*not sure what i am missing(or overdoing) about height*/
     .box {
         min-height: 50vh;
     }
