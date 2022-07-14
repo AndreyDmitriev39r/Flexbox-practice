@@ -21,6 +21,17 @@ second breakpoint: make both first and 6th container be at the top
     padding: 0;
 }
 
+/*text coded blocks, later will be some images*/
+
+
+
+p {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
 body {
     height: 100vh;
     font-size: 1rem;/*also need minsize for fonts, 
