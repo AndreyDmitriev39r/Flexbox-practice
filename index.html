@@ -20,26 +20,31 @@
 
     <div class="flexcontainer">
 <!--boxes numerated:
-when vertically: from top to bottom
-when horizontally(inline): from left to right -->
+according to task at the top of CSS file -->
         <div class="box firstbox">
             <p>First box</p>
         </div>
-        <div class="box secondbox">
-            <p>Second box</p>
+        <!--Need to group 2,3 and 4,5 with subcontainers-->
+        <div class="flexcontainer subcontainer firstsub">
+          <div class="box secondbox">
+              <p>Second box</p>
+          </div>
+          <div class="box thirdbox">
+              <p>Third box</p>
+          </div>
         </div>
-        <div class="box thirdbox">
-            <p>Third box</p>
-        </div>
-        <div class="box fourthbox">
-            <p>Fourth box</p>
-        </div>
-        <div class="box fifthbox">
-          <p>Fifth box</p>
+        <div class="flexcontainer subcontainer secondsub">
+          <div class="box fourthbox">
+              <p>Fourth box</p>
+          </div>
+          <div class="box fifthbox">
+            <p>Fifth box</p>
+          </div>
         </div>
         <div class="box sixthbox">
           <p>Sixth(last) box</p>
         </div>
+        
     </div>
   </body>
 </html>
