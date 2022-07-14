@@ -3,7 +3,7 @@
 
 mobile first: simple layout one column
 
-first breakpoint: make first and last containers >>> to be rightmost(1st) and leftmost(2nd)
+first breakpoint: make first and last containers >>> to be rightmost(1st) and leftmost(last)
                     also switch places : 2 and 3, 4 and 5
 
 second breakpoint: make both first and 6th container be at the top
@@ -19,6 +19,7 @@ second breakpoint: make both first and 6th container be at the top
     */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*text coded blocks, later will be some images*/
@@ -26,9 +27,9 @@ second breakpoint: make both first and 6th container be at the top
 
 
 p {
-    font-size: 5rem;
+    font-size: 1.3rem;
     text-align: center;
-    margin-top: 5%;
+    
 }
 
 
@@ -38,7 +39,7 @@ body {
                     or maintain size with breakpoints more flexible*/
 }
 
-.flexcontainer {
+.flexcontainer{ /*apparently need height 100% for subs, otherwise some boxes will collapse*/
     height: 100%;
     /*don't need any change in flex-direction, can deal with default values*/
     display: flex;
@@ -46,8 +47,13 @@ body {
 }
 
 body, .flexcontainer, .box {
-    width:100% /*every .box will fit on its own row for small screens*/
+    width:100%; /*every .box will fit on its own row for small screens*/
+    min-width: 275px; /*to not collapse on very small vw???something isn't working here*/
 }
+
+/*assume we wanna 3 boxes in the vw on small screens*/
+
+
 
 /*colorcoding boxes for testing/experimenting purposes*/
 
@@ -56,8 +62,10 @@ or image size
 or any content-specifics*/
 
 .box {
-    min-height:300px;
-    max-height:600px;    
+    height: 33.33vh;
+    min-height:100px;
+    max-height:250px;
+     
 }
 
 .firstbox {
