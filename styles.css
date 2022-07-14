@@ -1,3 +1,16 @@
+/*Task
+6 containers total
+
+mobile first: simple layout one column
+
+first breakpoint: make first and last containers >>> to be rightmost(1st) and leftmost(2nd)
+                    also switch places : 2 and 3, 4 and 5
+
+second breakpoint: make both first and 6th container be at the top
+                    also reswitch 2 and 3, 4 and 5
+                    but now for 4 and 5 should be above 2 and 3
+*/
+
 * {/*reset some props for work from scratch
 
     TODO: figure out: more approaches for reset
@@ -33,8 +46,7 @@ or any content-specifics*/
 
 .box {
     min-height:300px;
-    max-height:600px;
-    /*min-width:300px; that was crappy idea*/
+    max-height:600px;    
 }
 
 .firstbox {
@@ -53,38 +65,29 @@ or any content-specifics*/
     background-color: rgb(242, 233, 235);
 }
 
+.fifthbox {
+    background-color: greenyellow
+}
+
+.sixthbox {
+    background-color: blueviolet;
+}
+
 /*breakpoint values for mediaqueries for now generic,
 
 actual breakpoints MUST depend on content
 */
 
-/*FIGURE OUT about hiding/changing text dependin g on breakpoints
-with pure CSS
 
-is there elegant approach or we need
-many properties like for SCREENREADERS-ONLY
-*/
 
-/*first breakpoint >>> need 3-row layout, minimize middle boxes*/
 
-@media screen and (min-width: 500px) {
-    .secondbox, .thirdbox {
-        width: 50%; 
-    }
-}
 
-/*second breakpoint minimize the rest >>> 2-row layout*/
 
-@media screen and (min-width: 900px) {
-    .box {
-        width: 50%; 
-    }
-}
 
-/*for some very wide VW >>> lets make it one row*/
 
-@media screen and (min-width: 1350px) {
-    .box {
-        width: 25%;
-    }
-}
+
+
+
+
+
+
